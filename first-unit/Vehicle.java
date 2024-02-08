@@ -1,22 +1,13 @@
-public class Vehicle {
-  String type = "car";
-  boolean lightOn = false;
-  boolean doorOpen = false;
-  boolean motorOn = false;
-  int year = 2024;
-
-  int speed= 0;
-
-  void turnOnLights() {
-    lightOn = true;
-  }
-
-  void openDoor() {
-    doorOpen = true;
-  }
-
-  void turnOnEgine() {
-    motorOn = true;
+class Vehicle {
+  public static void main(String[] args) {
+    Subway subway = new Subway();
+    Train train = new Train();
+    Truck truck = new Truck();
+    Car car = new Car();
+    Bicycle bicycle = new Bicycle();
+    Submarine submarine = new Submarine();
+    Boat boat = new Boat();
+    Raft raft = new Raft();
   }
 }
 
@@ -77,7 +68,7 @@ class Truck {
   }
 }
 
-class car {
+class Car {
   boolean driving = false;
   boolean hasGasoline = true;
   int speed = 0;
