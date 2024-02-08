@@ -1,13 +1,13 @@
 class Vehicle {
   public static void main(String[] args) {
-    Subway subway = new Subway();
-    Train train = new Train();
-    Truck truck = new Truck();
-    Car car = new Car();
-    Bicycle bicycle = new Bicycle();
-    Submarine submarine = new Submarine();
-    Boat boat = new Boat();
-    Raft raft = new Raft();
+    Subway subway = new Subway("ja");
+    Train train = new Train("tren");
+    Truck truck = new Truck("troca");
+    Car car = new Car("rojo");
+    Bicycle bicycle = new Bicycle("si");
+    Submarine submarine = new Submarine("no");
+    Boat boat = new Boat("vuela");
+    Raft raft = new Raft("aveces");
   }
 }
 
@@ -16,6 +16,13 @@ class Subway {
   boolean inRoot = false;
   boolean lightOn = false;
   boolean doorsOpen = false;
+
+  Subway() {
+
+  }
+  Subway(String nameParam) {
+    name = "nice";
+  }
 
   void IsInRoot() {
     inRoot = true;
@@ -31,9 +38,17 @@ class Subway {
 }
 
 class Train {
+  String name;
   boolean hasPassengers = false;
   boolean hasDriver = false;
   boolean isOnFire = false;
+
+  Train() {
+
+  }
+  Train(String nameParam) {
+    name = "tren";
+  }
 
   void newPassagers() {
     hasPassengers = true;
@@ -55,6 +70,13 @@ class Truck {
   boolean doorsOpen = false;
   boolean engineOn = false;
 
+  Truck() {
+
+  }
+  Truck(String typeParam) {
+    type = "troca";
+  }
+
   void turnOnLights() {
     lightsOn = true;
   }
@@ -69,9 +91,18 @@ class Truck {
 }
 
 class Car {
+  String model;
   boolean driving = false;
   boolean hasGasoline = true;
   int speed = 0;
+
+  Car() {
+
+  }
+  Car(String modelParam) {
+    model = "puesi";
+
+  }
 
   void refillGasoline() {
     hasGasoline = true;
@@ -93,6 +124,14 @@ class Bicycle {
   boolean flatTire = false;
   boolean isOnRoad = false;
 
+  Bicycle() {
+
+  }
+
+  Bicycle(String TypeParam) {
+    type = "roja";
+  }
+
   void ringBell() {
     bellRinging = true;
   }
@@ -111,6 +150,15 @@ class Submarine {
   boolean underWater = false;
   boolean lightsOn = false;
   boolean fire = false;
+
+  Submarine() {
+
+  }
+
+  Submarine(String typeParam) {
+    type = "no es un submarino real";
+
+  }
 
   void dive() {
     underWater = true;
@@ -131,6 +179,14 @@ class Boat {
   boolean floating = false;
   boolean anchorUp = true;
 
+  Boat (){
+
+  }
+  Boat (String typeParam) {
+    type = "volador";
+
+  }
+
 
   void dropAnchor() {
     anchorUp = false;
@@ -150,6 +206,15 @@ class Raft {
   boolean floating = false;
   boolean row = false;
   int holes = 0;
+
+  Raft() {
+
+  }
+
+  Raft(String typeParam) {
+    type = "hihitl";
+
+  }
 
   void floatOnWater() {
     floating = true;
