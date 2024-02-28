@@ -173,7 +173,7 @@ class ProfessorArray {
   }
 }
 
-class Sega {
+public class Sega {
   public static void main(String[] args) {
 
     ProfessorHeadline professorHeadline = new ProfessorHeadline("Adrian", "Alarcon", 20, 1178231732, 10);
