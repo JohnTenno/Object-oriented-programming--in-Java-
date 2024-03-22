@@ -1,90 +1,55 @@
 All object-oriented programming (Java) projects will be uploaded here.
 
-contrusctor es aquel elemnto es aquel encargado de construir objetos o instancias
-es una funcion especial encargada de construir la clase
-ejemplo Vehicle vehicle = new Vehicle();
+All object-oriented programming (Java) projects will be uploaded here.
 
-memoria stack donde van los metodos
-heaq donde se liga con la instancia
+A constructor is a special function responsible for constructing objects or instances of a class. For example: Vehicle vehicle = new Vehicle();.
 
-es un metodo pertenenciente a la clase
-no regresa nada
-se llama a igual a la clase
+Stack memory is where methods are stored; heap memory is where instances are linked.
 
-Person p = new Person(); // Person() es un constructor vacio
-person p2 = new Person("Pedro", 15);
+A method belonging to the class that doesn't return anything is called using the class name.
 
-modificadors de acceso
-public {
-hace visible para todo el mundo
-}
-protected {
-visbible a todo le paquete a menos que se este en otro paquete
-}
-private {
-visible solo a la clase en la que se encuentra
-}
-default {
-visibles a todo el paquete
-}
+Example:
+Person p = new Person(); // Person() is an empty constructor
+Person p2 = new Person("Pedro", 15);
 
-modificador static
-static {
-el atributo o metodo pertenece a la clase y no a la instancia
-solo podemos tener variables y metodos
+Access modifiers:
 
-si tenemos static int number
-al generar la instancia no se guarda el numero, si no en la clase
-asi que si tenemos 3 instancias diferentes, no importa el valor de cada una
-ya que si es statica tendran todos el mismo valor
-}
+public: makes it visible to everyone.
+protected: visible to the entire package unless in another package.
+private: visible only to the class it's in.
+default: visible to the entire package.
+static modifier:
 
-modificador final {
-clase no puede ser heredada
-varibles solo puede inicializada una vez
-metodos no se pueden ser sobreesrito
+The attribute or method belongs to the class, not the instance.
+Variables and methods can be static.
+If we have static int number, the number is stored in the class, not in the instance. So, if we have three different instances, they all have the same value.
+final modifier:
 
-puedo crear la clase pero solo se instancia una vez, puede cambiar su estado
-}
+The class cannot be inherited, variables can only be initialized once, and methods cannot be overridden.
+You can create the class, but only one instance can be instantiated, and its state can change.
+Instance variables:
 
-variables de instancia {
-son todas las varibales que no estan en un meotdo de la clase
-}
+Variables that are not in a method of the class.
+Static variables:
 
-variables static {
-es una variable con el modificador static
-}
+A variable with the static modifier.
+Local variables:
 
-variables locales {
-son las que estan dentro del metodo
-}
+Variables inside a method.
+Shadowing:
 
-shadowing
+Refers to having two classes with the same name in different contexts.
+Can have local variables or not.
+this.: refers to the instance.
 
-se refiere a que tienes 2 clases con el mismo onmbre en diferentes contextos
+If you instantiate a static block, it is executed only once when an instance of the class is created.
 
-puedes tener variables locales o no
+Java Bean and POJO are the same: a plain old Java object is a simple class that only contains private attributes and provides methods to access the data. All variables are private and have methods get and set for each property. They are encapsulated objects.
 
-this. hace referencia a la instancia
+Inheritance allows us to inherit properties from one class to another.
 
-si instancias un bloque statico se ejecuta una unica vez que se crea una instancia de la clase
-
-java bean
-pojo es lo mismo
-play old java objet
-es una clase simple que solo contiene atributos privados y proporciona metodos para
-acceder a los datos
-todos las varibales son privadas
-tiene metodos get y set por cada propriedad
-
-son objetos encapsulado
-
-HERENCIA
-es un concepto que nos permite poder heredar propiedades a una clase a otras
-extens
-
-class vehicle {
-public String color;
+class Vehicle {
+    public String color;
 }
 
 class Car extends Vehicle {
@@ -95,61 +60,57 @@ class Truck extends Vehicle {
 
 }
 
-class MainClass{
-public static void main main(String[] args){
-Car car = new Car();
-car.color = "red";
-}
-}
-
-relacionn es una
-
-tiene un public
-class vehicle{}
-class speed{}
-class seat{}
-
-public class van extends vehicle{
-private speed speed;
-private Seat seatl
+public class MainClass {
+    public static void main(String[] args) {
+        Car car = new Car();
+        car.color = "red";
+    }
 }
 
-overloading permite tener multiples metodos con el mismo nombre
-pero diferentes metodos ejemplo en los contructores
 
-public class {
-public int sum () {
+Relationship:
 
+has a
+
+public class Vehicle {}
+class Speed {}
+class Seat {}
+
+public class Van extends Vehicle {
+    private Speed speed;
+    private Seat seat;
 }
-public int sum (int x, int x) {
 
+
+Overloading allows having multiple methods with the same name but different parameters, e.g., in constructors.
+public class MyClass {
+    public int sum() {
+
+    }
+    public int sum(int x, int y) {
+
+    }
+    public int sum(double x, double y) {
+
+    }
 }
-public int sum (double x, double x) {
 
-}
-}
+Inheritance, polymorphism, encapsulation, interfaces:
 
-herencia
-polimorfismo
-encapsulamiento
-interfases
+Encapsulation:
 
-encapsulamiento
+Hides the state of an object so that it can only be modified through the methods defined for that object.
+Interfaces:
 
-consiste en ocultar del estado de un objeto de forma que solo es posible
-modificarlo mediante los metodos definidos para dicho objeto
-
-los interfases son como las clases, solo que sus metodos son asbtractos
-
-no tiene mdetodos definidos
+Like classes, but their methods are abstract; they have no defined methods.
 
 public interface Animal {
-public abstract void eat();
-public abstract void sleep();
+    public abstract void eat();
+    public abstract void sleep();
 }
 
-public cass Cat implements Animal {
-public void eat( ){
-System.out.println.eat();
-}
+public class Cat implements Animal {
+    public void eat() {
+        System.out.println("eat");
+    }
 }
